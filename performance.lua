@@ -59,10 +59,10 @@ function _M.labelUpdater(event)
         table.insert(fpsArray, curFps)
     end
     _M.text.text = 'AvgFPS: ' .. tostring(mFloor(readableFps)) .. 
-                   ' | CurFPS: ' .. tostring(mFloor(curFps)) .. 
-                   ' | TextureMemory: ' ..
+                   '  |  CurFPS: ' .. tostring(mFloor(curFps)) .. 
+                   '  |  TextureMemory: ' ..
             tostring(mFloor(sGetInfo('textureMemoryUsed') * 0.0001) * 0.01) .. 'MB' .. 
-                   ' | LuaMemory: ' ..
+                   '  |  LuaMemory: ' ..
             tostring(mFloor(collectgarbage('count'))) .. 'kB'
     _M.text:toFront()
     prevTime = curTime
